@@ -1,4 +1,8 @@
-name: CICD
+name: CI-CD
+
+on: 
+  push:
+    branches: [main]
 
 jobs:
   code: 
