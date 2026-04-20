@@ -1,1 +1,24 @@
+name: CI-CD
 
+jobs:
+  code: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chechkout code
+        run: echo "Code cloned form GitHub."
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build docker container.
+        run: echo "Docker container built."
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test the container
+        run: echo "Testing the container.
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the app
+        run: echo "Docker compose deployed the app."
+      
