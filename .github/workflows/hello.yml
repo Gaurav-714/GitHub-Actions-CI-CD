@@ -18,3 +18,12 @@ jobs:
     
       - name: say hello to username
         run: echo "$USER"
+
+  praise:
+    runs-on: ubuntu-latest
+    steps:
+      - name: creating first workflow
+        run: echo "Successfully Created My First Workflow"
+
+      - name: hows it feeling
+        run: echo "Feeling Great By Learning To Create Workflows"
