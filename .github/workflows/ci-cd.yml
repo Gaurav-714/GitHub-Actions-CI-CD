@@ -1,8 +1,7 @@
 name: CI-CD
 
-on: 
-  push:
-    branches: [main]
+on:
+  workflow_dispatch:
 
 jobs:
   code: 
@@ -19,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test the container
-        run: echo "Testing the container.
+        run: echo "Testing the container."
   deploy:
     runs-on: ubuntu-latest
     steps:
