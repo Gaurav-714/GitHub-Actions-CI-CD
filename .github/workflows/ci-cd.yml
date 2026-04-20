@@ -1,7 +1,7 @@
 name: CI-CD
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:            
 
 jobs:
   code: 
@@ -10,16 +10,19 @@ jobs:
       - name: Chechkout code
         run: echo "Code cloned form GitHub."
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Build docker container.
         run: echo "Docker container built."
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Test the container
         run: echo "Testing the container."
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the app
