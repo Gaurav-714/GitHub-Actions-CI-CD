@@ -1,0 +1,15 @@
+# Workflow name
+name: Hello
+
+# Runs on a trigger
+on:
+  push:
+  branches: [main]
+
+# Jobs inside workflow
+jobs:
+  #Job run-name: 
+  greet:
+    # github runner
+    runs-on: ubuntu-latest
+    
