@@ -27,3 +27,9 @@ jobs:
 
       - name: hows it feeling
         run: echo "Feeling Great By Learning To Create Workflows"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: version check
+        run: python --version && docker --version
